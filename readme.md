@@ -27,42 +27,14 @@ Now simply run `mdf-exporter.py` and it will ask you if you want to replace the 
 > [!NOTE]
 > Due to how this program functions, you will have to repeat this process for each model's MDF files you want to replace. You could have multiple copies of `mdf-exporter.py` in say the root of the mod folder and use `RECURSIVE = True` and have different .list files for each copy of the .py file.
 
-## **Mod-Packer**
-A tool that automates the process of making a RAR file from your mod's files.
-This tool can also ignore specified file types and directories which is useful for ignoring helper files and such.
-
-**Requirements:**  
-
-`patool`, a compact python library for managing file archives.
-[http://wummel.github.io/patool/](http://wummel.github.io/patool/)
-
-Windows installation:  
-`python -m pip install patool` or `pip install patool`  
-
-Windows Subsystem for Linux (WSL):  
-`sudo pip install patool` or `sudo python -m pip install patool`  
+## **RE Engine Mod Assembler Tool**
+A tool that makes the process of creating a finalized mod, without leftover unused assets and files.
+This tool can ignore specified file types and directories as well as specific files.
 
 **Usage:**
 
-Download the latest release [here](https://github.com/Weeaboo420/RE-Modding-Tools/releases/tag/mod-packer)
+Download the latest release [here](https://github.com/Weeaboo420/RE-Modding-Tools/releases/tag/mod-assembler)
 
-Open the zip file and put `mod-packer.py` in the root of your mod, i.e. the folder that has `natives/`, `mod.jpg` and `modinfo.ini` in it.
+Open the zip file and put `RE Engine Mod Assembler Tool.exe` in the root of your mod, i.e. the folder that has `natives/`, `mod.jpg` and `modinfo.ini` in it.
 
-Edit mod-packer.py with a text-editor and edit these parameters to your liking, use the included examples as a guide:  
-
-**`USER_IGNORED_EXTENSIONS`**  
-A list of extensions to ignore when making the mod archive.  
-The extensions can be specified with or without a leading dot, the program will handle it automatically.
-
-**`USER_IGNORED_FILES`**  
-A list of files to ignore when making the mod archive.
-> [!IMPORTANT]
-> This will exclude **ANY** files that match the specified filenames, no matter what directory they are in.
-
-**`USER_IGNORED_DIRECTORIES`**  
-A list of directories to ignore when making the mod archive.  
-A full file path is required starting from the folder that this file is located in. Example: `natives/stm/_Chainsaw/Character/ch/cha1/Blender` will ignore the folder `Blender` according to that local file path.
-
-**`MOD_ARCHIVE_NAME`**  
-The name and full local path of the output RAR archive.  
-Since this is local you could have a file path like "../Mods/mymod.rar" and the archive will appear in that location relative to the root folder.
+Edit the included `settings.ini` file to your liking. "Empty" entries that do not have a traditional ini "value" must have an equals sign after them to be read properly, this is a limitation with the implementation of the ini reader. See the included default `settings.ini` file for examples on how to assign unwanted file extensions, folders and files.
