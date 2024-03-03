@@ -28,7 +28,7 @@ Now simply run `mdf-exporter.py` and it will ask you if you want to replace the 
 > Due to how this program functions, you will have to repeat this process for each model's MDF files you want to replace. You could have multiple copies of `mdf-exporter.py` in say the root of the mod folder and use `RECURSIVE = True` and have different .list files for each copy of the .py file.
 
 ## **RE Engine Mod Assembler Tool**
-A tool that makes the process of creating a finalized mod, without leftover unused assets and files.
+A tool that streamlines the process of creating a finalized mod, without leftover unused assets and files.
 This tool can ignore specified file types and directories as well as specific files.
 
 **Usage:**
